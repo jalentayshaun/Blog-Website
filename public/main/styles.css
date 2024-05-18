@@ -56,6 +56,26 @@ a {
 #feed {
 }
 
+#feed > div {
+    flex-direction: column;
+    width: 80%;
+}
+
+#post-data img {
+
+}
+
+/* p.username { IN CASE YOU CANT ADD SPACING AROUND THE USERNAME WITH A SPAN TAG
+
+} */
+
 /* Post Submit Bar */
 #post-bar {
+}
+
+#post-bar form {
+    border: 1px solid greenyellow;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
 }

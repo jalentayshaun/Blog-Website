@@ -38,11 +38,30 @@
         <section id="feed">
             <h1>Welcome Home</h1>
             <small>The only way through is forward...</small>
+
+            <div>
+                <div id="post-data">
+                    <a href="">
+                        <img src="main/images/svgs/user-regular.svg" alt="">
+                    </a>
+                    <span class="username">colorful_clove</span>
+                    <small class="time-stamp">05.18.24 9:24PM</small>
+                </div>
+                <div id="post-message">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis ab veniam fuga, rerum culpa aliquid ad et sapiente. Tenetur aut odit quam vero temporibus sed rem itaque. Quidem, animi quam!
+                    At illum soluta consequuntur nisi error rem quod consectetur laborum eaque culpa recusandae ab doloremque, ducimus blanditiis minus ratione enim quibusdam! Provident obcaecati voluptate maxime quae quaerat illum nobis consequatur.
+                </div>
+            </div>
         </section>
         
         <!-- Post form -->
         <section id="post-bar">
-            <h2>Post Form</h2>
+            <h2>What's On Your Mind?</h2>
+            <form action="/update-feed" method="post">
+                <input type="text" name="subject" placeholder="Subject">
+                <input type="text" name="message" placeholder="What do you want to say?">
+                <input type="submit" value="Post">
+            </form>
         </section>
     </section>
 
