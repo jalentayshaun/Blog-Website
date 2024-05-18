@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    border: 2px solid orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div {
+    border: 1px solid rgb(0, 153, 255);
+}
+
+/* Header */
+#header {
+    flex-direction: row;
+    min-height: 10vh;
+}
+
+/* Blog Container */
+#blog-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    min-height: 90vh;
+}
+
+#blog-container > section {
+    min-height: 100%;
+}
+
+/* Menu Bar */
+#menu-bar {
+}
+
+/* Post Feed */
+#feed {
+}
+
+/* Post Submit Bar */
+#post-bar {
+}
