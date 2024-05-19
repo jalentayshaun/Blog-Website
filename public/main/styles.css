@@ -3,6 +3,7 @@
     --accent-color: rgb(0, 36, 196);
     --tertiary-color: rgb(52, 52, 52);
     --background-color: rgb(29, 29, 29);
+    --light-grey: rgb(230, 230, 230);
 }
 
 .jacquard-12-regular {
@@ -54,6 +55,11 @@ h1 {
     font-size: 3rem;
 }
 
+h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
 a {
     text-decoration: none;
 }
@@ -62,7 +68,9 @@ a {
 #header {
     flex-direction: row;
     justify-content: space-between;
-    min-height: 10vh;
+    background-color: var(--tertiary-color);
+    border-bottom: 5px solid var(--primary-color);
+    min-height: 5vh;
 }
 
 #header-menu {
@@ -75,6 +83,14 @@ a {
     min-height: 2rem;
 }
 
+#header-menu a {
+    color: white;
+}
+
+#user-login button {
+   background: none;
+}
+
 #user-login img {
     min-height: 2rem;
 }
@@ -83,7 +99,7 @@ a {
 #blog-container {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    min-height: 90vh;
+    min-height: 95vh;
 }
 
 #blog-container > section {
@@ -93,10 +109,19 @@ a {
 
 /* Menu Bar */
 #menu-bar {
+    align-items: center;
+    background-image: url("../main/images/svgs/pattern-2.svg");
+}
+
+#menu-bar a {
+    color: black;
+    /* text-shadow: 1px 1px 5px black; */
+    font-size: larger;
 }
 
 /* Post Feed */
 #feed {
+    background-color: var(--light-grey);
 }
 
 #feed > div {
