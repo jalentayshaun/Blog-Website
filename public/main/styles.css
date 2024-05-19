@@ -1,6 +1,36 @@
+:root {
+    --primary-color: #ffd43b;
+    --accent-color: rgb(0, 36, 196);
+    --tertiary-color: rgb(52, 52, 52);
+    --background-color: rgb(29, 29, 29);
+}
+
+.jacquard-12-regular {
+    font-family: "Jacquard 12", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.abril-fatface-regular {
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* <uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 400 to 900 */
+
+.bodoni-moda {
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
 body {
     display: flex;
     flex-direction: column;
+    font-family: "Bodoni Moda", serif;
     padding: 0;
     margin: 0;
 }
@@ -18,6 +48,10 @@ section {
 div {
     border: 1px solid rgb(0, 153, 255);
     display: flex;
+}
+
+h1 {
+    font-size: 3rem;
 }
 
 a {
@@ -71,9 +105,18 @@ a {
 }
 
 #post-data {
+    font-family: "Abril Fatface", serif;
+    font-weight: lighter;
     justify-content: space-between;
     align-items: flex-end;
 }
+
+/* #post-data a {
+    border: 1px solid red;
+    border-radius: 50%;
+    min-width: 2rem;
+    min-height: 2rem;
+} */
 
 #post-data img {
     min-height: 1.5rem;

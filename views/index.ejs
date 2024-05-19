@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="main/styles.css">
     <title>Blog Website</title>
 </head>
@@ -37,16 +43,16 @@
         
         <!-- Post Feed -->
         <section id="feed">
-            <h1>Welcome Home</h1>
+            <h1 class="jacquard-12-regular">Welcome Home</h1>
             <small>The only way through is forward...</small>
 
             <div>
                 <div id="post-data">
+                    <span class="username">colorful_clove</span> <!-- take from user -->
                     <a href="">
-                        <img src="main/images/svgs/user-regular.svg" alt="User Icon">
+                        <img src="main/images/svgs/user-regular.svg" alt="User Icon"> <!-- prfile picture from user -->
                     </a>
-                    <span class="username">colorful_clove</span>
-                    <small class="time-stamp">05.18.24 9:24PM</small>
+                    <small class="time-stamp">05.18.24 9:24PM</small> <!-- new Date().getTime() -->
                 </div>
                 <div id="post-message">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis ab veniam fuga, rerum culpa aliquid ad et sapiente. Tenetur aut odit quam vero temporibus sed rem itaque. Quidem, animi quam!
