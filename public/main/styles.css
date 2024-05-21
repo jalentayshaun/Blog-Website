@@ -214,3 +214,26 @@ a {
     border-radius: 5px;
     background-color: var(--primary-yellow);
 }
+
+/* Footer */
+#footer {
+    color: white;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+    border-top: 5px solid var(--primary-yellow);
+    background-color: var(--tertiary-grey);
+}
+
+#footer ul {
+    display: flex;
+    list-style: none;
+}
+
+#footer ul li {
+    padding: 1rem;
+}
+
+#footer ul li img {
+    min-height: 2rem;
+}
