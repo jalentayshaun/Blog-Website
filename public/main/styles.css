@@ -105,6 +105,7 @@ a {
 #blog-container > section {
     min-height: 100%;
 }
+
 /* Menu Bar */
 #menu-bar {
     align-items: center;
@@ -146,6 +147,14 @@ a {
     justify-content: space-between;
     align-items: flex-end;
     border-bottom: 2px solid var(--light-grey);
+}
+
+#post-message {
+    flex-direction: column;
+}
+
+#post-message h3 {
+    margin: 0px 0px 10px 0px;
 }
 
 #post-message p {
