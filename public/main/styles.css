@@ -2,7 +2,7 @@
     --primary-yellow: #ffd43b;
     --accent-blue: rgb(0, 18, 100);
     --tertiary-grey: rgb(52, 52, 52);
-    --light-grey: rgb(230, 230, 230);
+    --light-grey: rgb(240, 240, 240);
     /* --background-color: rgb(29, 29, 29); */
 }
 
@@ -64,6 +64,35 @@ a {
     text-decoration: none;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 5px;
+    gap: 5px;
+    width: 80%;
+    background-color: var(--tertiary-grey);
+}
+
+form input {
+    font-size: 1rem;
+    border-radius: 5px;
+    min-height: 3rem;
+}
+
+form input[type=text] {
+    border: 2px solid var(--primary-yellow);
+}
+
+form input[name=message] {
+    min-height: 6rem;
+}
+
+form input[type=submit] {
+    border: 2px solid black;
+    background-color: var(--primary-yellow);
+}
+
 /* Header */
 #header {
     flex-direction: row;
@@ -99,11 +128,12 @@ a {
 #blog-container {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    min-height: 95vh;
+    height: 95vh;
 }
 
 #blog-container > section {
     min-height: 100%;
+    /* padding-bottom: 3rem; */
 }
 
 /* Menu Bar */
@@ -154,6 +184,7 @@ a {
     width: 80%;
     border-radius: 15px;
     background-color: var(--tertiary-grey);
+    margin-bottom: 1.5rem;
 }
 
 #post > div {
@@ -200,34 +231,29 @@ a {
     background-image: url("../main/images/svgs/pattern-2.svg");
 }
 
-#post-bar form {
+/* About */
+#about {
+    justify-content: center;
+    width: 80%;
+}
+
+/* Contact */
+#contact {
+    justify-content: center;
+    width: 80%;
+}
+
+#contact form { 
+    width: 100%;
+}
+
+#sender-name {
     display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    padding: 5px;
-    width: 85%;
-    min-height: 10rem;
-    background-color: var(--tertiary-grey);
+    gap: 5px;
 }
 
-#post-bar form input[type=text] {
-    border: 1px solid var(--primary-yellow);
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-#post-bar form input[name=subject] {
-    min-height: 2rem;
-}
-
-#post-bar form input[name=message] {
-    min-height: 5rem;
-}
-
-#post-bar form input[type=submit] {
-    border: 2px solid black;
-    border-radius: 5px;
-    background-color: var(--primary-yellow);
+#sender-name > input {
+    flex: 1;
 }
 
 /* Footer */
