@@ -1,7 +1,7 @@
 :root {
-    --primary-color: #ffd43b;
-    --accent-color: rgb(0, 36, 196);
-    --tertiary-color: rgb(52, 52, 52);
+    --primary-yellow: #ffd43b;
+    --accent-blue: rgb(0, 18, 100);
+    --tertiary-grey: rgb(52, 52, 52);
     --background-color: rgb(29, 29, 29);
     --light-grey: rgb(230, 230, 230);
 }
@@ -14,7 +14,7 @@
 
 .abril-fatface-regular {
     font-family: "Abril Fatface", serif;
-    font-weight: 400;
+    font-weight: 200;
     font-style: normal;
 }
 
@@ -37,7 +37,7 @@ body {
 }
 
 section {
-    border: 2px solid orange;
+    /* border: 2px solid orange; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -47,7 +47,7 @@ section {
 }
 
 div {
-    border: 1px solid rgb(0, 153, 255);
+    /* border: 1px solid rgb(0, 153, 255); */
     display: flex;
 }
 
@@ -57,7 +57,7 @@ h1 {
 
 h1, h2 {
     margin: 0;
-    padding: 0;
+    padding: 1rem;
 }
 
 a {
@@ -68,8 +68,8 @@ a {
 #header {
     flex-direction: row;
     justify-content: space-between;
-    background-color: var(--tertiary-color);
-    border-bottom: 5px solid var(--primary-color);
+    background-color: var(--tertiary-grey);
+    border-bottom: 5px solid var(--primary-yellow);
     min-height: 5vh;
 }
 
@@ -104,9 +104,7 @@ a {
 
 #blog-container > section {
     min-height: 100%;
-    overflow-y: scroll;
 }
-
 /* Menu Bar */
 #menu-bar {
     align-items: center;
@@ -121,19 +119,40 @@ a {
 
 /* Post Feed */
 #feed {
+    overflow-y: scroll;
     background-color: var(--light-grey);
 }
 
-#feed > div {
+#feed > small {
+    margin-bottom: 2rem;
+}
+
+#post {
+    color: white;
     flex-direction: column;
     width: 80%;
+    border-radius: 15px;
+    background-color: var(--tertiary-grey);
+}
+
+#post > div {
+    padding: 15px;
 }
 
 #post-data {
+    color: var(--primary-yellow);
     font-family: "Abril Fatface", serif;
     font-weight: lighter;
     justify-content: space-between;
     align-items: flex-end;
+    border-bottom: 2px solid var(--light-grey);
+}
+
+#post-message p {
+    padding: 15px;
+    margin: 0;
+    background-color: rgb(65, 65, 65);
+    border-radius: 0px 0px 15px 15px;
 }
 
 /* #post-data a {
@@ -153,11 +172,36 @@ a {
 
 /* Post Submit Bar */
 #post-bar {
+    background-image: url("../main/images/svgs/pattern-2.svg");
 }
 
 #post-bar form {
-    border: 1px solid greenyellow;
+    /* border: 1px solid greenyellow; */
     display: flex;
     flex-direction: column;
-    width: 90%;
+    border-radius: 10px;
+    padding: 5px;
+    width: 85%;
+    min-height: 10rem;
+    background-color: var(--tertiary-grey);
+}
+
+#post-bar form input[type=text] {
+    border: 1px solid var(--primary-yellow);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#post-bar form input[name=subject] {
+    min-height: 2rem;
+}
+
+#post-bar form input[name=message] {
+    min-height: 5rem;
+}
+
+#post-bar form input[type=submit] {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: var(--primary-yellow);
 }
