@@ -1,109 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="main/styles.css">
-    <title>Blog Website</title>
-</head>
-<body>
-    <!-- Header -->
-    <section id="header">
-        <div></div>
-        <div id="header-menu">
-            <a href="#">
-                <img src="main/images/svgs/house-user-solid.svg" alt="">
-            </a>
-            <a href="">About</a>
-            <a href="">Contact</a>
-        </div>
-        <div id="user-login">
-            <button>
-                <img src="main/images/svgs/user-solid.svg" alt="">
-            </button>
-        </div>
-    </section>
+<%- include("partials/header.ejs") %>
 
-    <!-- Blog Container -->
-    <section id="blog-container">
-        <!-- Left side menu -->
-        <section id="menu-bar">
-            <h2>Menu Bar</h2>
-            <!-- <ul>
-                <li><a href="">Feed</a></li>
-                <li><a href="">Messages</a></li>
-                <li><a href="">Friends</a></li>
-                <li><a href="">Activity</a></li>
-                <li><a href="">Archives</a></li>
-            </ul> -->
-            <a href="">Feed</a>
-            <a href="">Messages</a>
-            <a href="">Friends</a>
-            <a href="">Activity</a>
-            <a href="">Archives</a>
-        </section>
-        
-        <!-- Post Feed -->
-        <section id="feed">
-            <h1 class="jacquard-12-regular">Welcome Home</h1>
-            <small>The only way through is forward...</small>
-
-            <div id="post">
-                <div id="post-data">
-                    <span class="username">colorful_clove</span> <!-- take from user -->
-                    <a href="">
-                        <img src="main/images/svgs/user-regular.svg" alt="User Icon"> <!-- profile picture from user -->
-                    </a>
-                    <small class="time-stamp">05.18.24 9:24PM</small> <!-- new Date().getTime() -->
-                </div>
-                <div id="post-message">
-                    <h3>
-                        Lorem Skipsum
-                    </h3>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis ab veniam fuga, rerum culpa aliquid ad et
-                        sapiente. Tenetur aut odit quam vero temporibus sed rem itaque. Quidem, animi quam!
-                        At illum soluta consequuntur nisi error rem quod consectetur laborum eaque culpa recusandae ab doloremque, ducimus
-                        blanditiis minus ratione enim quibusdam! Provident obcaecati voluptate maxime quae quaerat illum nobis consequatur.
-                    </p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Post Form Menu -->
-        <section id="post-bar">
-            <h2>What's On Your Mind?</h2>
-            <form action="/update-feed" method="post">
-                <input class="bodoni-moda" type="text" name="subject" placeholder="Subject" required>
-                <input class="bodoni-moda" type="text" name="message" placeholder="What do you want to say?" required>
-                <input class="abril-fatface-regular" type="submit" value="Post">
-            </form>
-        </section>
+<!-- Blog Container -->
+<section id="blog-container">
+    <!-- Left side menu -->
+    <section id="menu-bar">
+        <h2>Menu Bar</h2>
+        <!-- <ul>
+            <li><a href="">Feed</a></li>
+            <li><a href="">Messages</a></li>
+            <li><a href="">Friends</a></li>
+            <li><a href="">Activity</a></li>
+            <li><a href="">Archives</a></li>
+        </ul> -->
+        <a href="">Feed</a>
+        <a href="">Messages</a>
+        <a href="">Friends</a>
+        <a href="">Activity</a>
+        <a href="">Archives</a>
     </section>
+    
+    <%- include("partials/feed.ejs") %>
+</section>
 
-    <!-- Footer -->
-    <section id="footer">
-        <h4>Copyright &#169 Jalen Pinder 2024</h4>
-        <ul>
-            <li><a href="https://jalentayshaun.com/">
-                <img src="main/images/svgs/briefcase-solid.svg" alt="Portfolio">
-            </a></li>
-            <li><a href="https://www.instagram.com/jalentayshaun/">
-                <img src="main/images/svgs/instagram.svg" alt="Instagram">
-            </a></li>
-            <li><a href="www.linkedin.com/in/jalen-pinder">
-                <img src="main/images/svgs/linkedin.svg" alt="LinkedIn">
-            </a></li>
-            <li><a href="https://github.com/jalentayshaun">
-                <img src="main/images/svgs/github.svg" alt="GitHub">
-            </a></li>
-        </ul>
-    </section>
-</body>
-</html>
+<%- include("partials/footer.ejs") %>
