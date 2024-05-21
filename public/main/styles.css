@@ -2,8 +2,8 @@
     --primary-yellow: #ffd43b;
     --accent-blue: rgb(0, 18, 100);
     --tertiary-grey: rgb(52, 52, 52);
-    --background-color: rgb(29, 29, 29);
     --light-grey: rgb(230, 230, 230);
+    /* --background-color: rgb(29, 29, 29); */
 }
 
 .jacquard-12-regular {
@@ -114,8 +114,8 @@ a {
 
 #menu-bar a {
     color: black;
-    /* text-shadow: 1px 1px 5px black; */
     font-size: larger;
+    /* text-shadow: 1px 1px 5px white; */
 }
 
 /* Post Feed */
@@ -175,17 +175,12 @@ a {
     min-height: 1.5rem;
 }
 
-/* p.username { IN CASE YOU CANT ADD SPACING AROUND THE USERNAME WITH A SPAN TAG
-
-} */
-
 /* Post Submit Bar */
 #post-bar {
     background-image: url("../main/images/svgs/pattern-2.svg");
 }
 
 #post-bar form {
-    /* border: 1px solid greenyellow; */
     display: flex;
     flex-direction: column;
     border-radius: 10px;
