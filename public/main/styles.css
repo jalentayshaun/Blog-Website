@@ -129,7 +129,7 @@ form input[type=submit] {
     display: grid;
     align-items: flex-start;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 95vh;
+    grid-template-rows: 90vh;
 }
 
 #blog-container > section {
@@ -236,14 +236,19 @@ form input[type=submit] {
 
 /* About */
 #about {
+    font-size: larger;
     justify-content: center;
-    width: 80%;
+    height: 95vh;
+    padding: 0rem 10rem;
+    background-color: var(--light-grey);
 }
 
 /* Contact */
 #contact {
     justify-content: center;
-    width: 80%;
+    height: 90vh;
+    padding: 0rem 10rem;
+    background-color: var(--light-grey);
 }
 
 #contact form { 
