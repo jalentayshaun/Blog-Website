@@ -127,12 +127,13 @@ form input[type=submit] {
 /* Blog Container */
 #blog-container {
     display: grid;
+    align-items: flex-start;
     grid-template-columns: 1fr 3fr 1fr;
-    height: 95vh;
+    grid-template-rows: 95vh;
 }
 
 #blog-container > section {
-    min-height: 100%;
+    height: 100%;
     /* padding-bottom: 3rem; */
 }
 
@@ -171,7 +172,8 @@ form input[type=submit] {
 /* Post Feed */
 #feed {
     overflow-y: scroll;
-    border: 2px solid var(--primary-yellow);
+    border-left: 2px solid var(--primary-yellow);
+    border-right: 2px solid var(--primary-yellow);
     background-color: var(--light-grey);
 }
 
