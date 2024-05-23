@@ -1,6 +1,5 @@
 :root {
     --primary-yellow: #ffd43b;
-    --accent-blue: rgb(0, 18, 100);
     --tertiary-grey: #343434;
     --light-grey: rgb(240, 240, 240);
     /* --background-color: rgb(29, 29, 29); */
@@ -141,7 +140,7 @@ form input[type=submit] {
     display: grid;
     align-items: flex-start;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 90vh;
+    grid-template-rows: 95vh;
 }
 
 #blog-container > section {
