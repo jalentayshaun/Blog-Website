@@ -1,7 +1,7 @@
 :root {
     --primary-yellow: #ffd43b;
     --accent-blue: rgb(0, 18, 100);
-    --tertiary-grey: rgb(52, 52, 52);
+    --tertiary-grey: #343434;
     --light-grey: rgb(240, 240, 240);
     /* --background-color: rgb(29, 29, 29); */
 }
@@ -93,6 +93,13 @@ form input[type=submit] {
     background-color: var(--primary-yellow);
 }
 
+.logo {
+    border-radius: 20px;
+    background-image: url("images/welcome-home-logo.png");
+    background-position: center;
+    background-size: contain;
+}
+
 /* Header */
 #header {
     flex-direction: row;
@@ -100,6 +107,11 @@ form input[type=submit] {
     background-color: var(--tertiary-grey);
     border-bottom: 5px solid var(--primary-yellow);
     min-height: 5vh;
+}
+
+#header .logo {
+    height: 5rem;
+    width: 5rem;
 }
 
 #header-menu {
@@ -245,10 +257,23 @@ form input[type=submit] {
 
 /* Contact */
 #contact {
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
     height: 90vh;
-    padding: 0rem 10rem;
+    padding: 0rem 5rem;
     background-color: var(--light-grey);
+}
+
+#contact > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact .logo {
+    height: 25rem;
+    width: 25rem;
 }
 
 #contact form { 

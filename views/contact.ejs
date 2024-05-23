@@ -2,18 +2,21 @@
 
 <!-- Contact -->
 <section id="contact">
-    <h2>
-        Let's Get In Touch
-    </h2>
-    <form action="/contact" method="POST">
-        <div id="sender-name">
-            <input class="bodoni-moda" type="text" name="fName" placeholder="First Name" required>
-            <input class="bodoni-moda" type="text" name="lName" placeholder="Last Name" required>
-        </div>
-        <input class="bodoni-moda" type="text" name="email" placeholder="Email">
-        <input class="bodoni-moda" type="text" name="message" placeholder="What's Up?" required>
-        <input class="abril-fatface-regular" type="submit" value="Send">
-    </form>
+    <div>
+        <h2>
+            Let's Get In Touch
+        </h2>
+        <form action="/contact" method="POST">
+            <div id="sender-name">
+                <input class="bodoni-moda" type="text" name="fName" placeholder="First Name" required>
+                <input class="bodoni-moda" type="text" name="lName" placeholder="Last Name" required>
+            </div>
+            <input class="bodoni-moda" type="text" name="email" placeholder="Email">
+            <input class="bodoni-moda" type="text" name="message" placeholder="What's Up?" required>
+            <input class="abril-fatface-regular" type="submit" value="Send">
+        </form>
+    </div>
+    <div class="logo"></div>
 </section>
 
 <%- include("partials/footer.ejs") %>
