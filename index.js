@@ -29,8 +29,18 @@ app.post("/contact-message", (req, res) => {
 })
 
 // Post to feed
+var feedArray = [];
 app.post("/update-feed", (req, res) => {
-    res.render("index.ejs");
+    var postData = {
+        username: "colorful_clove",
+        profilePicture: "img",
+        timeStamp: "05.18.24 9:24PM",
+        subject: req.body["subject"],
+        postMessage: req.body["post-message"]
+    }
+    feedArray.push(postData);
+    console.log(feedArray[0].subject);
+    res.render("index.ejs", feedArray);
 })
 
 // Edit post

@@ -22,8 +22,17 @@
     <!-- Post Feed -->
     <section id="feed">
         <h1 class="jacquard-12-regular">Welcome 🏠 Home</h1>
-        <small>The only way through is forward...</small>
-    
+        
+        <!-- Output Post -->
+        <!-- If there are posts, print array -->
+        <% if(locals.feedArray) { %>
+            <%- feedArray %>
+        <!-- If no posts, "The only way through is forward" -->
+        <% } else { %>
+            <small>The only way through is forward...</small>
+        <% } %>
+        
+
         <div id="post">
             <div id="post-data">
                 <span class="username">colorful_clove</span> <!-- take from user -->
@@ -54,7 +63,7 @@
         <h2>What's On Your Mind?</h2>
         <form action="/update-feed" method="post">
             <input class="bodoni-moda" type="text" name="subject" placeholder="Subject" required>
-            <input class="bodoni-moda" type="text" name="message" placeholder="What do you want to say?" required>
+            <input class="bodoni-moda" type="text" name="post-message" placeholder="What do you want to say?" required>
             <input class="abril-fatface-regular" type="submit" value="Post">
         </form>
     </section>
