@@ -26,7 +26,31 @@
         <!-- Output Post -->
         <!-- If there are posts, print array -->
         <% if(locals.feedArray) { %>
-            <%- feedArray %>
+            <%- array.forEach((feedArray) => { %>
+                <div id="post">
+                    <div id="post-data">
+                        <span class="username">colorful_clove</span> <!-- take from user -->
+                        <a href="">
+                            <img src="main/images/svgs/user-regular.svg" alt="User Icon"> <!-- profile picture from user -->
+                        </a>
+                        <small class="time-stamp">05.18.24 9:24PM</small> <!-- new Date().getTime() -->
+                    </div>
+                    <div id="post-message">
+                        <h3>
+                            Lorem Skipsum
+                        </h3>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis ab veniam fuga, rerum culpa
+                            aliquid ad et
+                            sapiente. Tenetur aut odit quam vero temporibus sed rem itaque. Quidem, animi quam!
+                            At illum soluta consequuntur nisi error rem quod consectetur laborum eaque culpa recusandae ab
+                            doloremque, ducimus
+                            blanditiis minus ratione enim quibusdam! Provident obcaecati voluptate maxime quae quaerat illum nobis
+                            consequatur.
+                        </p>
+                    </div>
+                </div>
+            <%- }); %>
         <!-- If no posts, "The only way through is forward" -->
         <% } else { %>
             <small>The only way through is forward...</small>
