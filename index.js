@@ -31,13 +31,7 @@ app.post("/contact-message", (req, res) => {
 // Post to feed
 var feedArray = [];
 app.post("/update-feed", (req, res) => {
-    // Time variables
-    // var hours = new Date().getHours();
-    // var mins = new Date().getMinutes();
-    // var seconds = new Date().getSeconds();
-    // var currentTime = `${hours}:${mins}:${seconds}`;
     var currentTime = new Date().toLocaleString();
-
     var subject = req.body["subject"];
     var message = req.body["post-message"];
 
