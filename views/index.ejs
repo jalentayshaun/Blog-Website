@@ -5,13 +5,6 @@
     <!-- Left side menu -->
     <section id="menu-bar">
         <h2>Menu Bar</h2>
-        <!-- <ul>
-            <li><a href="">Feed</a></li>
-            <li><a href="">Messages</a></li>
-            <li><a href="">Friends</a></li>
-            <li><a href="">Activity</a></li>
-            <li><a href="">Archives</a></li>
-        </ul> -->
         <a href="">Feed</a>
         <a href="">Messages</a>
         <a href="">Friends</a>
@@ -22,11 +15,12 @@
     <!-- Post Feed -->
     <section id="feed">
         <h1 class="jacquard-12-regular">Welcome 🏠 Home</h1>
+        <small>The only way through is forward...</small>
         
         <!-- Output Post -->
         <!-- If there are posts, print array -->
-        <% if(locals.feedArray) { %>
-            <%- array.forEach((feedArray) => { %>
+        <% if(locals.postSubject) { %>
+            <!-- < array.forEach((feedArray) => { %> -->
                 <div id="post">
                     <div id="post-data">
                         <span class="username">colorful_clove</span> <!-- take from user -->
@@ -36,34 +30,21 @@
                         <small class="time-stamp">05.18.24 9:24PM</small> <!-- new Date().getTime() -->
                     </div>
                     <div id="post-message">
-                        <h3>
-                            Lorem Skipsum
-                        </h3>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis ab veniam fuga, rerum culpa
-                            aliquid ad et
-                            sapiente. Tenetur aut odit quam vero temporibus sed rem itaque. Quidem, animi quam!
-                            At illum soluta consequuntur nisi error rem quod consectetur laborum eaque culpa recusandae ab
-                            doloremque, ducimus
-                            blanditiis minus ratione enim quibusdam! Provident obcaecati voluptate maxime quae quaerat illum nobis
-                            consequatur.
-                        </p>
+                        <%- postSubject %>
+                        <%- postMessage %>
                     </div>
                 </div>
-            <%- }); %>
-        <!-- If no posts, "The only way through is forward" -->
-        <% } else { %>
-            <small>The only way through is forward...</small>
+            <!-- < }); %> -->
         <% } %>
         
 
-        <div id="post">
+        <!-- <div id="post">
             <div id="post-data">
-                <span class="username">colorful_clove</span> <!-- take from user -->
+                <span class="username">colorful_clove</span> <-- take from user --
                 <a href="">
-                    <img src="main/images/svgs/user-regular.svg" alt="User Icon"> <!-- profile picture from user -->
+                    <img src="main/images/svgs/user-regular.svg" alt="User Icon"> <-- profile picture from user --
                 </a>
-                <small class="time-stamp">05.18.24 9:24PM</small> <!-- new Date().getTime() -->
+                <small class="time-stamp">05.18.24 9:24PM</small> <-- new Date().getTime() --
             </div>
             <div id="post-message">
                 <h3>
@@ -79,7 +60,7 @@
                     consequatur.
                 </p>
             </div>
-        </div>
+        </div> -->
     </section>
     
     <!-- Post Form Menu -->

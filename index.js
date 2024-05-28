@@ -29,18 +29,20 @@ app.post("/contact-message", (req, res) => {
 })
 
 // Post to feed
-var feedArray = [];
+// var feedArray = [];
 app.post("/update-feed", (req, res) => {
-    var postData = {
-        username: "colorful_clove",
-        profilePicture: "img",
-        timeStamp: "05.18.24 9:24PM",
-        subject: req.body["subject"],
-        postMessage: req.body["post-message"]
-    }
-    feedArray.push(postData);
-    console.log(feedArray[0].subject);
-    res.render("index.ejs", feedArray);
+    var subject = req.body["subject"];
+    var message = req.body["post-message"];
+    const data = {
+        // username: "colorful_clove",
+        // profilePicture: "img",
+        // timeStamp: "05.18.24 9:24PM",
+        postSubject: `<h3>${subject}</h3>`,
+        postMessage: `<p>${message}</p>`
+    };
+    // feedArray.push(postData);
+    // console.log(feedArray[0].postSubject);
+    res.render("index.ejs", data);
 })
 
 // Edit post

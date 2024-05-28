@@ -154,20 +154,6 @@ form input[type=submit] {
     background-image: url("../main/images/svgs/pattern-2.svg");
 }
 
-/* #menu-bar ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    list-style: none;
-    min-width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-#menu-bar ul li {
-    padding: 0.5rem 0rem;
-} */
-
 #menu-bar a {
     color: black;
     font-size: larger;
