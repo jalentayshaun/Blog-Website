@@ -20,14 +20,14 @@
         <!-- Output Post -->
         <!-- If there are posts, print array -->
         <% if(locals.postSubject) { %>
-            <!-- < array.forEach((feedArray) => { %> -->
+            <!-- < feedArray.forEach((element) => { %> -->
                 <div id="post">
                     <div id="post-data">
-                        <span class="username">colorful_clove</span> <!-- take from user -->
+                        <%- username %>
                         <a href="">
-                            <img src="main/images/svgs/user-regular.svg" alt="User Icon"> <!-- profile picture from user -->
+                            <%- profilePicture %>
                         </a>
-                        <small class="time-stamp">05.18.24 9:24PM</small> <!-- new Date().getTime() -->
+                        <%- timeStamp %>
                     </div>
                     <div id="post-message">
                         <%- postSubject %>
@@ -35,6 +35,9 @@
                     </div>
                 </div>
             <!-- < }); %> -->
+        <!-- If posts fail -->
+        <% } else { %>
+            <small>Couldn't load posts</small>
         <% } %>
         
 
