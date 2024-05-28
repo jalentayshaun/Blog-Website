@@ -140,7 +140,7 @@ form input[type=submit] {
     display: grid;
     align-items: flex-start;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 95vh;
+    grid-template-rows: 100vh;
 }
 
 #blog-container > section {

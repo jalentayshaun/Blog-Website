@@ -19,22 +19,24 @@
         
         <!-- Output Post -->
         <!-- If there are posts, print array -->
-        <% if(locals.postSubject) { %>
-            <!-- < feedArray.forEach((element) => { %> -->
+        <% if(locals.updateSuccessful) { %>
+            <!-- < var elementIndex; %> -->
+            <% feedArray.forEach((element) => { %>
+                <!-- < elementIndex = feedArray.length - 1; %> -->
                 <div id="post">
                     <div id="post-data">
-                        <%- username %>
+                        <%- data.username %>
                         <a href="">
-                            <%- profilePicture %>
+                            <%- data.profilePicture %>
                         </a>
-                        <%- timeStamp %>
+                        <%- data.timeStamp %>
                     </div>
                     <div id="post-message">
-                        <%- postSubject %>
-                        <%- postMessage %>
+                        <%- data.postSubject %>
+                        <%- data.postMessage %>
                     </div>
                 </div>
-            <!-- < }); %> -->
+            <% }); %>
         <!-- If posts fail -->
         <% } else { %>
             <small>Couldn't load posts</small>
