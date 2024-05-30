@@ -4,13 +4,16 @@ import bodyParser from "body-parser";
 const app = express();
 const port = 3000;
 
+var postsCreated = false;
+var feedArray = [];
+
 app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Home
 app.get("/", (req, res) => {
-    res.render("index.ejs");
+    res.render("index.ejs", {postsCreated, feedArray});
 })
 
 // About
@@ -29,15 +32,14 @@ app.post("/contact-message", (req, res) => {
 })
 
 // Post to feed
-var feedArray = [];
 app.post("/update-feed", (req, res) => {
+    postsCreated = true;
 
     var currentTime = new Date().toLocaleString();
     var subject = req.body["subject"];
     var message = req.body["post-message"];
 
     const data = {
-        updateSuccessful: true,
         username: `<span class="username">colorful_clove</span>`,
         profilePicture: `<img src="main/images/svgs/user-regular.svg" alt="User Icon">`,
         timeStamp: `<small class="time-stamp">${currentTime}</small>`,
@@ -46,10 +48,10 @@ app.post("/update-feed", (req, res) => {
     };
 
     feedArray.push(data);
-    console.log(feedArray.length);
+    // console.log(feedArray.length);
     console.log(feedArray);
     
-    res.render("index.ejs", {data, feedArray});
+    res.render("index.ejs", {postsCreated, feedArray});
 })
 
 // Edit post
