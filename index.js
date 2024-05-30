@@ -48,10 +48,12 @@ app.post("/update-feed", (req, res) => {
     };
 
     feedArray.push(data);
-    // console.log(feedArray.length);
+    
+    // Most recent posts at the top
+    var reversedArray = feedArray.reverse();
     console.log(feedArray);
     
-    res.render("index.ejs", {postsCreated, feedArray});
+    res.render("index.ejs", {postsCreated, reversedArray});
 })
 
 // Edit post

@@ -20,25 +20,23 @@
         <!-- Output Post -->
         <!-- If there are posts, print array -->
         <% if(locals.postsCreated) { %>
-            <% for (let index = feedArray.length - 1; index > 0; index--) { %>
+            <% for (let index = 0; index < reversedArray.length; index++) { %>
                 <% console.log(index) %>
                 <div id="post">
                     <div id="post-data">
-                        <%- feedArray[index].username %>
+                        <%- reversedArray[index].username %>
                         <a href="">
-                            <%- feedArray[index].profilePicture %>
+                            <%- reversedArray[index].profilePicture %>
                         </a>
-                        <%- feedArray[index].timeStamp %>
+                        <%- reversedArray[index].timeStamp %>
                     </div>
                     <div id="post-message">
-                        <%- feedArray[index].postSubject %>
-                        <%- feedArray[index].postMessage %>
+                        <%- reversedArray[index].postSubject %>
+                        <%- reversedArray[index].postMessage %>
                     </div>
                 </div>
-                <!-- Index error handling -->
-                <% index = 1; %>
             <% }; %>
-        <!-- If posts fail -->
+        <!-- If posts fail or none yet -->
         <% } else { %>
             <small>Couldn't load posts</small>
         <% } %>
