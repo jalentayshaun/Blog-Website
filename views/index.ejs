@@ -19,7 +19,7 @@
         
         <!-- Output Post -->
         <!-- If there are posts, print array -->
-        <% if(locals.postsCreated) { %>
+        <% if(locals.postsCreated && postsCreated == true) { %>
             <% for (let index = 0; index < reversedArray.length; index++) { %>
                 <% console.log(index) %>
                 <div id="post">
@@ -36,7 +36,10 @@
                     </div>
                 </div>
             <% }; %>
-        <!-- If posts fail or none yet -->
+        <!-- If no posts yet -->
+        <% } else if(locals.postsCreated && postsCreated == false) { %>
+            <small>No posts yet</small>
+        <!-- If posts fail -->
         <% } else { %>
             <small>Couldn't load posts</small>
         <% } %>
