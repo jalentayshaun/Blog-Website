@@ -19,55 +19,27 @@
         
         <!-- Output Post -->
         <!-- If there are posts, print array -->
-        <% if(locals.postsCreated == true) { %>
-            <% for (let index = 0; index < reversedArray.length; index++) { %>
-                <% console.log(index) %>
-                <div id="post">
-                    <div id="post-data">
-                        <%- reversedArray[index].username %>
-                        <a href="">
-                            <%- reversedArray[index].profilePicture %>
-                        </a>
-                        <%- reversedArray[index].timeStamp %>
+        <% if(locals.feed) { %>
+                <% feed.forEach(post => { %>
+                    <div id="post">
+                        <div id="post-data">
+                            <span class="username"><%= post.username %></span>
+                            <a href=""><%- post.profilePicture %></a>
+                            <small class="time-stamp"><%= post.timeStamp %></small>
+                        </div>
+                        <div id="post-message">
+                            <h3><%= post.subject %></h3>
+                            <p><%= post.message %></p>
+                        </div>
                     </div>
-                    <div id="post-message">
-                        <%- reversedArray[index].postSubject %>
-                        <%- reversedArray[index].postMessage %>
-                    </div>
-                </div>
-            <% }; %>
+                <% }); %>
         <!-- If no posts yet -->
-        <% } else if(locals.postsCreated == false) { %>
+        <% } else { %>
             <small>No posts yet</small>
         <!-- If posts fail -->
-        <% } else { %>
-            <small>Couldn't load posts</small>
+        <!-- < } else { %>
+            <small>Couldn't load posts</small> -->
         <% } %>
-        
-
-        <!-- <div id="post">
-            <div id="post-data">
-                <span class="username">colorful_clove</span> <-- take from user --
-                <a href="">
-                    <img src="main/images/svgs/user-regular.svg" alt="User Icon"> <-- profile picture from user --
-                </a>
-                <small class="time-stamp">05.18.24 9:24PM</small> <-- new Date().getTime() --
-            </div>
-            <div id="post-message">
-                <h3>
-                    Lorem Skipsum
-                </h3>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis ab veniam fuga, rerum culpa
-                    aliquid ad et
-                    sapiente. Tenetur aut odit quam vero temporibus sed rem itaque. Quidem, animi quam!
-                    At illum soluta consequuntur nisi error rem quod consectetur laborum eaque culpa recusandae ab
-                    doloremque, ducimus
-                    blanditiis minus ratione enim quibusdam! Provident obcaecati voluptate maxime quae quaerat illum nobis
-                    consequatur.
-                </p>
-            </div>
-        </div> -->
     </section>
     
     <!-- Post Form Menu -->
@@ -75,7 +47,7 @@
         <h2>What's On Your Mind?</h2>
         <form action="/update-feed" method="post">
             <input class="bodoni-moda" type="text" name="subject" placeholder="Subject" required>
-            <input class="bodoni-moda" type="text" name="post-message" placeholder="What do you want to say?" required>
+            <input class="bodoni-moda" type="text" name="message" placeholder="What do you want to say?" required>
             <input class="abril-fatface-regular" type="submit" value="Post">
         </form>
     </section>

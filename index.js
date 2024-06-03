@@ -4,16 +4,41 @@ import bodyParser from "body-parser";
 const app = express();
 const port = 3000;
 
-var postsCreated = false;
-var feedArray = [];
-
 app.use(express.static("public"));
-
 app.use(bodyParser.urlencoded({ extended: true }));
+
+let data;
 
 // Home
 app.get("/", (req, res) => {
-    res.render("index.ejs", {postsCreated, feedArray});
+    res.render("index.ejs", { feed: data });
+})
+
+// Post to feed
+var feedArray = [];
+app.post("/update-feed", (req, res) => {
+    var currentTime = new Date().toLocaleString();
+
+    const userPost = {
+        username: "colorful_clove",
+        profilePicture: `<img src="main/images/svgs/user-regular.svg" alt="User Icon">`,
+        timeStamp: currentTime,
+        subject: req.body.subject,
+        message: req.body.message
+    };
+
+    feedArray.push(userPost);
+    
+    // Most recent posts at the top
+    data = feedArray.slice().reverse(); // Make a shallow copy
+    console.log(data);
+
+    res.redirect("/");
+})
+
+// Edit post
+app.patch("/edit-post", (req, res) => {
+    res.render("index.ejs");
 })
 
 // About
@@ -28,36 +53,6 @@ app.get("/contact", (req, res) => {
 
 // Contact form message
 app.post("/contact-message", (req, res) => {
-    res.render("index.ejs");
-})
-
-// Post to feed
-app.post("/update-feed", (req, res) => {
-    postsCreated = true;
-
-    var currentTime = new Date().toLocaleString();
-    var subject = req.body["subject"];
-    var message = req.body["post-message"];
-
-    const data = {
-        username: `<span class="username">colorful_clove</span>`,
-        profilePicture: `<img src="main/images/svgs/user-regular.svg" alt="User Icon">`,
-        timeStamp: `<small class="time-stamp">${currentTime}</small>`,
-        postSubject: `<h3>${subject}</h3>`,
-        postMessage: `<p>${message}</p>`
-    };
-
-    feedArray.push(data);
-    
-    // Most recent posts at the top
-    var reversedArray = feedArray.reverse();
-    console.log(feedArray);
-    
-    res.render("index.ejs", {postsCreated, reversedArray});
-})
-
-// Edit post
-app.patch("/edit-post", (req, res) => {
     res.render("index.ejs");
 })
 
